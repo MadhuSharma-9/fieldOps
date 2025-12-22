@@ -6,15 +6,15 @@ const About = () => {
   const pillars = [
     {
       title: 'Clarity',
-      body: 'Make complex infrastructure data readable at a glance for any citizen or official.'
+      body: 'Make field mobilisation plans, assignments, and progress easy to understand at a glance for research teams and supervisors..'
     },
     {
       title: 'Trust',
-      body: 'Use transparent data sources and clear status language so decisions are defensible.'
+      body: 'Rely on clearly defined roles, time and location stamps, and consistent field records so decisions are based on verifiable information.'
     },
     {
       title: 'Momentum',
-      body: 'Keep teams aligned with live updates, gentle alerts, and progress visibility.'
+      body: 'Keep field teams aligned through real-time updates, timely alerts, and clear visibility of ongoing field activities.'
     }
   ];
 
@@ -37,12 +37,11 @@ const About = () => {
               About FieldOps by Anweshan
             </p>
             <h1 className="text-4xl md:text-5xl font-black leading-tight mb-4">
-              Building a clear, shared view of Nepal&apos;s on field projects.
+              ABOUT FIELDOPS BY ANWESHAN
+              Building a clear, shared view of field research operations.
             </h1>
             <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
-              We take scattered municipal datasets and turn them into a calm, map-first experience.
-              The goal is simple: anyone should see what is being built, where it stands, and how
-              it impacts their community.
+              We bring together field mobilisation plans, assignments, and real-time activity data into a single, structured view. The goal is simple: research teams should clearly see who is deployed, where work is happening, and how field activities are progressing across study locations
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {stats.map(item => (
@@ -61,28 +60,27 @@ const About = () => {
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-gray-900">FieldOps by Anweshan team</p>
-                  <p className="text-xs text-gray-500">Product, data, and civic partners</p>
+                  <p className="text-xs text-gray-500">Product, research, and field operations partners</p>
                 </div>
               </div>
               <p className="text-sm text-gray-700 leading-relaxed">
-                We collaborate with municipalities, NGOs, and civic tech teams to keep data flows healthy and
-                interfaces effortless. Every release is guided by usability testing with both citizens and officials.
+                We work closely with research organisations, implementing partners, and field teams to ensure field operations are well coordinated and easy to manage. Every release is shaped by practical field experience and continuous feedback from enumerators, supervisors, and research managers.
               </p>
               <div className="grid grid-cols-2 gap-3 text-xs text-gray-600">
                 <div className="rounded-xl border border-emerald-100 bg-white p-3">
                   <p className="font-semibold text-gray-900 mb-1">Design principles</p>
                   <ul className="space-y-1 list-disc list-inside">
-                    <li>Map-first orientation</li>
-                    <li>Calm gradients</li>
-                    <li>Legible type & spacing</li>
+                    <li>Field-first workflows</li>
+                    <li>Simple, low-burden interfaces</li>
+                    <li>Clear roles and permissions</li>
                   </ul>
                 </div>
                 <div className="rounded-xl border border-sky-100 bg-white p-3">
                   <p className="font-semibold text-gray-900 mb-1">Delivery</p>
                   <ul className="space-y-1 list-disc list-inside">
-                    <li>Live status signals</li>
-                    <li>Report-ready exports</li>
-                    <li>Ward-level fidelity</li>
+                    <li>Real-time activity status</li>
+                    <li>Report-ready data exports</li>
+                    <li>Location-based tracking</li>
                   </ul>
                 </div>
               </div>
@@ -118,11 +116,10 @@ const About = () => {
             Work with us
           </p>
           <h3 className="text-2xl md:text-3xl font-black text-gray-900 mb-3">
-            Want to shape how infrastructure data is experienced?
+            Want to strengthen how field research operations are managed?
           </h3>
           <p className="text-sm md:text-base text-gray-700 mb-6 max-w-2xl mx-auto">
-            We partner with municipalities and organizations to tailor the platform—custom layers, datasets,
-            and onboarding for your teams.
+            We work with research organisations and implementing partners to tailor FieldOps to their study needs, including project setup, field structures, and onboarding for field teams.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3 pb-8">
             <a

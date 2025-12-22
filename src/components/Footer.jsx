@@ -61,8 +61,8 @@ const Footer = () => {
             
             {/* About Us Blurb */}
             <p className="text-gray-700 text-sm leading-relaxed max-w-xs">
-              A next-generation platform bridging the gap between municipal data and public transparency. 
-              Explore projects, ward by ward, with real-time infrastructure insights.
+              A next-generation platform bridging the gap between field planning and on-ground execution.
+              Track research activities across study locations with real-time visibility and control.
             </p>
           </div>
 

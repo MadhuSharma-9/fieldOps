@@ -44,36 +44,36 @@ const Home = () => {
 
   const audienceConfigs = {
     citizens: {
-      label: 'Clients',
+      label: 'Enumerator view',
       color: 'from-emerald-600 to-lime-500',
       description:
-        'See what is being built in your ward, how far along projects are, and where investments are going.',
+        'See your assigned field activities, where data collection is scheduled, and what progress is expected from you.',
       bullets: [
-        'Search by ward, municipality, or project type',
-        'Understand timelines and current status at a glance',
-        'Share public project views with your community'
+        'View assigned study areas, households, or clusters',
+        'Understand daily targets, timelines, and task status at a glance',
+        'Record field activity with time and location stamps'
       ]
     },
     officials: {
-      label: 'Municipal Officials',
+      label: 'Field Supervisor view',
       color: 'from-sky-600 to-emerald-500',
       description:
-        'Coordinate projects, defend budgets, and communicate progress with a single, visual source of truth.',
+        'Monitor field team deployment, coverage, and progress across assigned study areas.',
       bullets: [
-        'Monitor project pipelines across all wards',
-        'Export reports for council or ministry reviews',
-        'Identify stalled or at-risk projects early'
+        'Track enumerator activity by location and time',
+        'Review progress against plans and timelines',
+        'Support verification and supervision in real time'
       ]
     },
     planners: {
-      label: 'Planners & NGOs',
+      label: 'Core Research Team view',
       color: 'from-indigo-600 to-sky-500',
       description:
-        'Overlay infrastructure data with impact and risk to plan smarter interventions that matter.',
+        'Oversee field mobilisation, coverage, and progress across all study locations.',
       bullets: [
-        'Layer multiple datasets for deeper insights',
-        'Spot underserved regions in seconds',
-        'Collaborate across institutions with shared views'
+        'Monitor field activity and deployment status',
+        'Review coverage, timelines, and operational gaps',
+        'Access structured, report-ready field summaries'
       ]
     }
   };
@@ -323,11 +323,10 @@ const Home = () => {
                 Built for everyone
               </p>
               <h2 className="text-3xl font-black text-gray-900 tracking-tight mb-2">
-                One platform, different experiences.
+                One platform, different roles.
               </h2>
               <p className="text-sm md:text-base text-gray-600 max-w-xl">
-                Switch between audiences to see how FieldOps adapts to different needs, 
-                from everyday citizens to municipal planners.
+                Switch between roles to see how FieldOps supports everyone involved in fieldwork, from enumerators and field supervisors on the ground to the core research team overseeing planning, quality, and analysis.
               </p>
             </div>
           </div>
@@ -406,11 +405,11 @@ const Home = () => {
                   Live snapshot
                 </p>
                 <h3 className="text-lg font-bold text-gray-900 mb-4">
-                  Sample activity today
+                  Field activity today
                 </h3>
                 <div className="space-y-4">
                   <div>
-                    <p className="text-xs text-gray-500 mb-1">Projects with recent updates</p>
+                    <p className="text-xs text-gray-500 mb-1">Field activities with recent updates</p>
                     <p className="text-2xl font-black text-emerald-700">247</p>
                     <p className="text-[11px] text-emerald-700">+32 vs. last week</p>
                   </div>
@@ -418,19 +417,18 @@ const Home = () => {
                     <div className="rounded-xl bg-white/80 border border-emerald-100 p-3">
                       <p className="font-semibold text-gray-900 mb-1">On-track</p>
                       <p className="text-xl font-black text-emerald-600">71%</p>
-                      <p className="text-[10px] text-gray-500 mt-1">Roads • Schools • Health</p>
+                      <p className="text-[10px] text-gray-500 mt-1">Households • Clusters • Study sites</p>
                     </div>
                     <div className="rounded-xl bg-white/80 border border-sky-100 p-3">
-                      <p className="font-semibold text-gray-900 mb-1">At risk</p>
+                      <p className="font-semibold text-gray-900 mb-1">Needs attntion</p>
                       <p className="text-xl font-black text-sky-600">14%</p>
-                      <p className="text-[10px] text-gray-500 mt-1">Delays & funding gaps</p>
+                      <p className="text-[10px] text-gray-500 mt-1">Delays, access issues, or staffing gaps</p>
                     </div>
                   </div>
                 </div>
               </div>
               <p className="mt-4 text-[11px] text-gray-500">
-                This is a sample view. In your workspace, these numbers are driven by live municipal datasets.
-              </p>
+                This is a sample view. In active studies, these figures reflect live field activity reported by enumerators and supervisors              </p>
             </div>
           </div>
         </div>
