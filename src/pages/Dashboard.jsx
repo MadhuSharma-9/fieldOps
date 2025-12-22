@@ -22,7 +22,7 @@ const Dashboard = () => {
       // If no token, kick them out
       if (!token) { navigate('/login'); return; }
 
-      const res = await axios.get('http://127.0.0.1:8000/api/projects/', {
+      const res = await axios.get('https://fieldopsbackend.onrender.com/api/projects/', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setProjects(res.data);
