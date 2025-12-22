@@ -68,7 +68,7 @@ const MapView = () => {
         if (!token) { navigate('/login'); return; }
         const config = { headers: { Authorization: `Bearer ${token}` } };
         
-        const projectRes = await axios.get(`http://127.0.0.1:8000/api/projects/${projectId}/`, config);
+        const projectRes = await axios.get(`https://fieldopsbackend.onrender.com/api/projects/${projectId}/`, config);
         setProject(projectRes.data);
         fetchFacilities();
       } catch (err) { navigate('/dashboard'); }
@@ -92,7 +92,7 @@ const MapView = () => {
   const fetchFacilities = async () => {
     try {
       const token = localStorage.getItem('access_token');
-      const res = await axios.get(`http://127.0.0.1:8000/api/projects/${projectId}/facilities/`, {
+      const res = await axios.get(`https://fieldopsbackend.onrender.com/api/projects/${projectId}/facilities/`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setMapData(res.data);
@@ -110,7 +110,7 @@ const MapView = () => {
     
     try {
       const token = localStorage.getItem('access_token');
-      const response = await axios.post('http://127.0.0.1:8000/api/process-file/', formData, {
+      const response = await axios.post('https://fieldopsbackend.onrender.com/api/process-file/', formData, {
         headers: { 'Content-Type': 'multipart/form-data', Authorization: `Bearer ${token}` }
       });
       alert(response.data.message);

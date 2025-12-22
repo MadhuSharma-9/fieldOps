@@ -25,7 +25,7 @@ export const AuthProvider = ({ children }) => {
     // 2. Login Function
     const login = async (username, password) => {
         try {
-            const res = await axios.post('http://127.0.0.1:8000/api/login/', {
+            const res = await axios.post('https://fieldopsbackend.onrender.com/api/login/', {
                 username,
                 password
             });
@@ -45,7 +45,7 @@ export const AuthProvider = ({ children }) => {
     // 3. Register Function
     const register = async (username, email, password) => {
         try {
-            await axios.post('http://127.0.0.1:8000/api/register/', {
+            await axios.post('https://fieldopsbackend.onrender.com/api/register/', {
                 username,
                 email,
                 password
