@@ -34,7 +34,7 @@ const About = () => {
         <div className="max-w-6xl mx-auto px-6 lg:px-8 relative z-10 grid gap-10 lg:grid-cols-2 items-center">
           <div>
             <p className="text-xs font-semibold tracking-[0.25em] uppercase text-emerald-600 mb-3">
-              About Project Map
+              About FieldOps by Anweshan
             </p>
             <h1 className="text-4xl md:text-5xl font-black leading-tight mb-4">
               Building a clear, shared view of Nepal&apos;s on field projects.
@@ -60,7 +60,7 @@ const About = () => {
                   PM
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-gray-900">Project Map team</p>
+                  <p className="text-sm font-semibold text-gray-900">FieldOps by Anweshan team</p>
                   <p className="text-xs text-gray-500">Product, data, and civic partners</p>
                 </div>
               </div>

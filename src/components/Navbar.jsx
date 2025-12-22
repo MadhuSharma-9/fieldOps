@@ -32,7 +32,7 @@ const Navbar = () => {
           <Link to="/" className={`text-2xl font-black tracking-tighter hover:opacity-80 transition ${
             isHomePage ? 'text-gray-900' : 'text-gray-900'
           }`}>
-            Project <span className="text-emerald-700">Map</span>
+            FieldOps<span className="text-emerald-700"> by Anweshan</span>
           </Link>
 
           {/* DESKTOP LINKS */}

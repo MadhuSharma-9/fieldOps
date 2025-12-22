@@ -55,7 +55,7 @@ const Footer = () => {
                 <span className="text-white font-black text-xl">PM</span>
               </div>
               <span className="text-2xl font-black tracking-tighter">
-                Project <span className="text-emerald-700">Map</span>
+                FieldOps<span className="text-emerald-700">by Anweshan</span>
               </span>
             </div>
             
@@ -132,7 +132,7 @@ const Footer = () => {
         <div className="border-t border-gray-200 pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
             <p>
-              © {currentYear} Project Map. All rights reserved.
+              © {currentYear} FieldOps by Anweshan. All rights reserved.
             </p>
             <div className="flex gap-6">
               <Link to="/privacy" className="hover:text-emerald-700 transition-colors">

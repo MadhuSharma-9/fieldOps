@@ -22,23 +22,23 @@ const Home = () => {
   const features = [
     {
       icon: HiMap,
-      title: 'Interactive Ward Maps',
-      description: 'Pan, zoom, and explore granular infrastructure data for every ward in Nepal with a map-first experience.'
+      title: 'Study / Project Configuration',
+      description: 'Defines research objectives, study areas, target populations, and implementation parameters.'
     },
     {
       icon: HiChartBar,
-      title: 'Live Project Insights',
-      description: 'Track budgets, timelines, and completion rates with visual dashboards that update as data changes.'
+      title: 'Real-time Field Activity Tracking',
+      description: 'Logs and monitors field mobilisation activities in real time, including time and location, to support accurate reporting and accountability.'
     },
     {
       icon: HiDocumentReport,
-      title: 'Smart Reporting',
-      description: 'Generate rich municipal summaries and export-ready reports in a few clicks for meetings and audits.'
+      title: 'Location-based Mapping and Coverage Monitoring',
+      description: 'Visualises field coverage through map-based views and tracks progress across study locations.'
     },
     {
       icon: HiGlobeAlt,
-      title: 'Transparency for Everyone',
-      description: 'Give citizens and decision-makers a shared, trusted view of how infrastructure is evolving across regions.'
+      title: 'Field Researcher Assignment Tracking',
+      description: 'Manages mobilisation plans, including enumerator deployment, supervisor assignments, study areas, and allocated time.'
     }
   ];
 
@@ -99,15 +99,14 @@ const Home = () => {
             {/* Left: Copy + CTAs */}
             <div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-gray-900 mb-5 leading-tight">
-                Make Nepal&apos;s Projects
+                Bringing structure, transparency 
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 via-lime-400 to-sky-500">
-                  visible, searchable, and alive.
+                  and control to field research
                 </span>
               </h1>
 
               <p className="text-base md:text-lg text-gray-700 mb-8 max-w-xl leading-relaxed">
-                Project Map turns complex municipal datasets into an intuitive, map-first experience. 
-                See every project, track progress in real-time, and communicate impact with confidence.
+                FieldOps by Anweshan delivers end-to-end visibility and control over field mobilisation, ensuring data quality, accountability, and timely execution of research operations.
               </p>
 
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-6">
@@ -283,7 +282,7 @@ const Home = () => {
               </h2>
             </div>
             <p className="text-sm md:text-base text-gray-600 max-w-xl">
-              From high-level overviews to ward-level deep dives, Project Map combines map interactions, 
+              From high-level overviews to ward-level deep dives, FieldOps combines map interactions, 
               metrics, and reports into a simple, elegant experience.
             </p>
           </div>
@@ -307,10 +306,6 @@ const Home = () => {
                     <p className="text-sm text-gray-600 leading-relaxed mb-3">
                       {feature.description}
                     </p>
-                    <button className="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 group-hover:text-emerald-800">
-                      Learn more
-                      <HiArrowRight className="text-[11px] group-hover:translate-x-0.5 transition-transform" />
-                    </button>
                   </div>
                 </div>
               );
@@ -331,7 +326,7 @@ const Home = () => {
                 One platform, different experiences.
               </h2>
               <p className="text-sm md:text-base text-gray-600 max-w-xl">
-                Switch between audiences to see how Project Map adapts to different needs, 
+                Switch between audiences to see how FieldOps adapts to different needs, 
                 from everyday citizens to municipal planners.
               </p>
             </div>
@@ -508,7 +503,7 @@ const Home = () => {
             </h2>
             <p className="text-sm md:text-base text-gray-600 mb-4">
               Municipal data is often trapped in PDFs, spreadsheets, or internal systems. 
-              We designed Project Map to make that information understandable at a glance, 
+              We designed FieldOps to make that information understandable at a glance, 
               whether you&apos;re a citizen, a journalist, or a decision-maker.
             </p>
             <p className="text-sm md:text-base text-gray-600">
@@ -554,7 +549,7 @@ const Home = () => {
             </h2>
             <p className="text-sm md:text-base text-gray-600 mb-5">
               Whether you&apos;re a municipality, an NGO, or a civic tech team, 
-              we can help you craft a tailor-made experience on top of Project Map.
+              we can help you craft a tailor-made experience on top of FieldOps.
             </p>
             <div className="space-y-3 text-sm text-gray-700">
               <div className="flex items-center gap-2">
