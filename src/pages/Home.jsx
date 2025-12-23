@@ -442,11 +442,9 @@ const Home = () => {
               Simple, opinionated flow
             </p>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900 tracking-tight mb-3">
-              From raw data to clear decisions.
-            </h2>
+              From field activity to informed decisions. </h2>
             <p className="text-sm md:text-base text-gray-600 max-w-2xl mx-auto">
-              We take care of the complexity: you see clean maps, clear trends, and transparent progress
-              that anyone can understand.
+              We handle the operational complexity so teams see clear assignments, live progress, and reliable field insights that support timely decisions.
             </p>
           </div>
 
@@ -454,18 +452,18 @@ const Home = () => {
             {[
               {
                 step: '01',
-                title: 'Connect municipal sources',
-                body: 'We ingest infrastructure records from municipalities and standardized templates, cleaning and normalizing them automatically.'
+                title: 'Set up field operations',
+                body: 'Define studies, locations, field teams, roles, and timelines in a structured workspace designed for research mobilisation.'
               },
               {
                 step: '02',
-                title: 'Map and enrich projects',
-                body: 'Each project is geocoded, attached to a ward, and enriched with metadata like type, budget, and progress.'
+                title: 'Deploy and track fieldwork',
+                body: 'Field activities are logged in real time, linked to locations and assignments, and enriched with time, progress, and supervision details.'
               },
               {
                 step: '03',
-                title: 'Share live, visual stories',
-                body: 'Stakeholders explore data on the map, generate reports, and track how projects change over time.'
+                title: 'Monitor, review, and act',
+                body: 'Supervisors and research teams monitor coverage, identify gaps, generate reports, and respond quickly as field conditions change.'
               }
             ].map((item, idx) => (
               <div
@@ -497,26 +495,26 @@ const Home = () => {
               Why we built this
             </p>
             <h2 className="text-3xl font-black text-gray-900 tracking-tight mb-4">
-              Projects data should feel be easily accessible.
+              Field operations data should be clear, shared, and trustworthy.
             </h2>
             <p className="text-sm md:text-base text-gray-600 mb-4">
-              Municipal data is often trapped in PDFs, spreadsheets, or internal systems. 
-              We designed FieldOps to make that information understandable at a glance, 
-              whether you&apos;re a citizen, a journalist, or a decision-maker.
+              In many research projects, critical field information sits across emails, spreadsheets, PDFs, and disconnected tools. This creates gaps between clients, research teams, and field staff, making it difficult to track progress, verify activities, and ensure quality.
             </p>
             <p className="text-sm md:text-base text-gray-600">
-              The experience is inspired by the best consumer apps: fluid interactions, 
-              a clean visual language, and thoughtful defaults that keep you in flow as you explore.
+              FieldOps was built to close that gap. It creates a shared, real-time view of field mobilisation, allowing clients and research agencies to see the same information, ask better questions, and stay aligned on progress, timelines, and responsibilities.
+            </p>
+            <p className="text-sm md:text-base text-gray-600">
+              The experience is designed to support accountability and quality at every stage, with clear records, structured workflows, and transparent field activity that teams can rely on with confidence.
             </p>
           </div>
           <div className="space-y-4">
             <div className="rounded-2xl border border-emerald-100 bg-white/90 p-5 shadow-[0_14px_40px_rgba(15,23,42,0.06)]">
               <p className="text-xs font-semibold text-emerald-700 mb-1">Design principles</p>
               <ul className="space-y-2 text-sm text-gray-700">
-                <li>• Map-first navigation for spatial understanding.</li>
-                <li>• Gentle animation and gradients to guide focus.</li>
-                <li>• Clean typography and whitespace for legibility.</li>
-                <li>• Clear, opinionated flows for non-technical users.</li>
+                <li>• Field-first design focused on real field workflows and constraints</li>
+                <li>• Simple, low-burden interfaces that reduce reporting fatigue.</li>
+                <li>• Clear layouts and readable typography for quick understanding.</li>
+                <li>• Structured, guided flows that support consistent and accurate field reporting.</li>
               </ul>
             </div>
             <div className="rounded-2xl border border-gray-200 bg-gradient-to-r from-slate-900 via-slate-900 to-slate-800 p-5 text-slate-100">
@@ -524,11 +522,10 @@ const Home = () => {
                 Experience snapshot
               </p>
               <p className="text-sm mb-3">
-                Hover, click, and zoom through projects without ever feeling lost. 
-                Each interaction is designed to feel smooth and intentional.
+                Navigate field activities, assignments, and coverage without friction. Every interaction is designed to be purposeful, helping users focus on what matters in the field rather than on the tool itself.
               </p>
               <p className="text-xs text-slate-400">
-                The live app layers real datasets on top of this UI, letting you explore Nepal&apos;s infrastructure story in real-time.
+                Live field activity data is layered into the interface in real time, allowing teams to monitor progress, verify work, and respond quickly as conditions change.
               </p>
             </div>
           </div>
@@ -543,24 +540,22 @@ const Home = () => {
               Talk to us
             </p>
             <h2 className="text-3xl font-black text-gray-900 tracking-tight mb-4">
-              Ready to design your own view of Nepal?
-            </h2>
+              Ready to strengthen how your field operations are managed? </h2>
             <p className="text-sm md:text-base text-gray-600 mb-5">
-              Whether you&apos;re a municipality, an NGO, or a civic tech team, 
-              we can help you craft a tailor-made experience on top of FieldOps.
+              Whether you are a research organisation, implementing partner, or donor-supported programme, we can help you configure FieldOps to match your study design, field structure, and operational needs.
             </p>
             <div className="space-y-3 text-sm text-gray-700">
               <div className="flex items-center gap-2">
                 <span className="h-2 w-2 rounded-full bg-emerald-500"></span>
-                <span>Guided demos and design workshops for your team.</span>
+                <span>Guided demos and hands-on walkthroughs for your teams</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="h-2 w-2 rounded-full bg-sky-500"></span>
-                <span>Custom layers, datasets, and integrations.</span>
+                <span>Custom project setup, workflows, and reporting views</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="h-2 w-2 rounded-full bg-lime-500"></span>
-                <span>Dedicated onboarding for municipal staff.</span>
+                <span>Structured onboarding for field staff, supervisors, and core research teams</span>
               </div>
             </div>
           </div>
