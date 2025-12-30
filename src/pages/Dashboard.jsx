@@ -39,7 +39,7 @@ const Dashboard = () => {
     e.preventDefault();
     try {
       const token = localStorage.getItem('access_token');
-      await axios.post('http://127.0.0.1:8000/api/projects/', {
+      await axios.post('https://fieldopsbackend.onrender.com/api/projects/', {
         title: newProject.title,
         description: newProject.description
       }, {

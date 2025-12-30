@@ -29,10 +29,15 @@ const Navbar = () => {
         <div className="flex justify-between h-20 items-center">
           
           {/* LOGO */}
-          <Link to="/" className={`text-2xl font-black tracking-tighter hover:opacity-80 transition ${
+          <Link to="/" className={`flex items-center gap-3 hover:opacity-80 transition ${
             isHomePage ? 'text-gray-900' : 'text-gray-900'
           }`}>
-            FieldOps<span className="text-emerald-700"> by Anweshan</span>
+            <div className="w-10 h-10 bg-gradient-to-br from-emerald-600 to-lime-500 rounded-lg flex items-center justify-center shadow-[0_10px_30px_rgba(16,185,129,0.25)]">
+              <span className="text-white font-black text-xl">FO</span>
+            </div>
+            <span className="text-2xl font-black tracking-tighter">
+              FieldOps<span className="text-emerald-700"> by Anweshan</span>
+            </span>
           </Link>
 
           {/* DESKTOP LINKS */}

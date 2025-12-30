@@ -56,7 +56,7 @@ const About = () => {
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <div className="h-10 w-10 rounded-2xl bg-emerald-600 text-white font-black flex items-center justify-center shadow-[0_12px_30px_rgba(16,185,129,0.35)]">
-                  PM
+                  FO
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-gray-900">FieldOps by Anweshan team</p>
@@ -123,7 +123,7 @@ const About = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3 pb-8">
             <a
-              href="mailto:contact@projectmap.com"
+              href="mailto:info@anweshan.org"
               className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-lime-500 text-white text-sm font-semibold shadow-[0_18px_45px_rgba(16,185,129,0.35)] hover:shadow-[0_22px_60px_rgba(16,185,129,0.45)] transition"
             >
               Email the team

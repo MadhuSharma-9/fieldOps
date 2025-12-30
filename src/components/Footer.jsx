@@ -8,7 +8,6 @@ const Footer = () => {
 
   const quickLinks = [
     { name: 'Home', path: '/' },
-    { name: 'Features', path: '/#features' }, // Using hash for same-page anchor
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/#contact' }
   ];
@@ -16,25 +15,19 @@ const Footer = () => {
   const socialLinks = [
     { 
       icon: FaFacebook, 
-      url: 'https://facebook.com', 
+      url: 'https://www.facebook.com/anweshanpvt/', 
       label: 'Facebook',
       color: 'hover:text-blue-600' // Facebook blue on hover
     },
     { 
-      icon: FaTwitter, 
-      url: 'https://twitter.com', 
-      label: 'Twitter',
-      color: 'hover:text-blue-400' // Twitter blue on hover
-    },
-    { 
       icon: FaLinkedin, 
-      url: 'https://linkedin.com', 
+      url: 'https://np.linkedin.com/company/anweshan', 
       label: 'LinkedIn',
       color: 'hover:text-blue-700' // LinkedIn blue on hover
     },
     { 
       icon: FaInstagram, 
-      url: 'https://instagram.com', 
+      url: 'https://www.instagram.com/anweshan_org/?hl=en', 
       label: 'Instagram',
       color: 'hover:text-pink-600' // Instagram pink on hover
     }
@@ -52,7 +45,7 @@ const Footer = () => {
             {/* Company Logo Placeholder */}
             <div className="flex items-center gap-2">
               <div className="w-10 h-10 bg-gradient-to-br from-emerald-600 to-lime-500 rounded-lg flex items-center justify-center shadow-[0_10px_30px_rgba(16,185,129,0.25)]">
-                <span className="text-white font-black text-xl">PM</span>
+                <span className="text-white font-black text-xl">FO</span>
               </div>
               <span className="text-2xl font-black tracking-tighter">
                 FieldOps<span className="text-emerald-700">by Anweshan</span>
@@ -113,15 +106,15 @@ const Footer = () => {
             <div className="mt-6 space-y-2 text-sm text-gray-600">
               <div className="flex items-center gap-2">
                 <HiMail className="text-emerald-600" />
-                <span>contact@projectmap.com</span>
+                <span>info@anweshan.org</span>
               </div>
               <div className="flex items-center gap-2">
                 <HiPhone className="text-emerald-600" />
-                <span>+977 1-234-5678</span>
+                <span>+977-01-5526674</span>
               </div>
               <div className="flex items-center gap-2">
                 <HiLocationMarker className="text-emerald-600" />
-                <span>Kathmandu, Nepal</span>
+                <span>Talchikhel, Lalitpur, Nepal</span>
               </div>
             </div>
           </div>
