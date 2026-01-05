@@ -1,17 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { HiUserCircle, HiMenu, HiX } from 'react-icons/hi';
+import { HiUserCircle, HiMenu, HiX, HiChevronDown } from 'react-icons/hi';
 
 const Navbar = () => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
+  const dropdownTimeoutRef = useRef(null);
 
   const isHomePage = location.pathname === '/';
   const isActive = (path) =>
     location.pathname === path || location.pathname.startsWith(`${path}/`);
+  
+  // Check if any About sub-page is active
+  const isAboutActive = isActive('/vision') || isActive('/mission') || isActive('/team');
+
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (dropdownTimeoutRef.current) {
+        clearTimeout(dropdownTimeoutRef.current);
+      }
+    };
+  }, []);
 
   const handleLogout = () => {
     logout();
@@ -52,16 +66,86 @@ const Navbar = () => {
             >
               HOME
             </Link>
-            <Link
-              to="/about"
-              className={`relative pb-1 text-sm font-semibold tracking-wide transition-colors after:absolute after:left-0 after:right-0 after:-bottom-0.5 after:h-0.5 after:rounded-full after:bg-emerald-600 after:transition-transform after:duration-200 after:origin-left ${
-                isActive('/about') 
-                  ? 'text-emerald-700 after:scale-x-100' 
-                  : 'text-gray-600 hover:text-emerald-700 after:scale-x-0 hover:after:scale-x-100'
-              }`}
+            {/* ABOUT DROPDOWN */}
+            <div 
+              className="relative"
+              onMouseEnter={() => {
+                // Clear any pending close timeout
+                if (dropdownTimeoutRef.current) {
+                  clearTimeout(dropdownTimeoutRef.current);
+                  dropdownTimeoutRef.current = null;
+                }
+                setAboutDropdownOpen(true);
+              }}
+              onMouseLeave={() => {
+                // Add a delay before closing to allow cursor movement
+                dropdownTimeoutRef.current = setTimeout(() => {
+                  setAboutDropdownOpen(false);
+                }, 200);
+              }}
             >
-              ABOUT
-            </Link>
+              <button
+                type="button"
+                className={`relative pb-1 text-sm font-semibold tracking-wide transition-colors after:absolute after:left-0 after:right-0 after:-bottom-0.5 after:h-0.5 after:rounded-full after:bg-emerald-600 after:transition-transform after:duration-200 after:origin-left flex items-center gap-1 cursor-pointer ${
+                  isAboutActive 
+                    ? 'text-emerald-700 after:scale-x-100' 
+                    : 'text-gray-600 hover:text-emerald-700 after:scale-x-0 hover:after:scale-x-100'
+                }`}
+              >
+                ABOUT
+                <HiChevronDown className={`text-xs transition-transform duration-200 ${aboutDropdownOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {/* DROPDOWN MENU */}
+              {aboutDropdownOpen && (
+                <div 
+                  className="absolute top-full left-0 pt-2 w-48 z-50"
+                  onMouseEnter={() => {
+                    // Clear timeout when entering dropdown menu
+                    if (dropdownTimeoutRef.current) {
+                      clearTimeout(dropdownTimeoutRef.current);
+                      dropdownTimeoutRef.current = null;
+                    }
+                  }}
+                >
+                  <div className="bg-white rounded-lg shadow-lg border border-gray-200 py-2">
+                    <Link
+                      to="/vision"
+                      className={`block px-4 py-2 text-sm transition-colors ${
+                        isActive('/vision')
+                          ? 'bg-emerald-50 text-emerald-700 font-semibold'
+                          : 'text-gray-700 hover:bg-emerald-50 hover:text-emerald-700'
+                      }`}
+                      onClick={() => setAboutDropdownOpen(false)}
+                    >
+                      Vision
+                    </Link>
+                    <Link
+                      to="/mission"
+                      className={`block px-4 py-2 text-sm transition-colors ${
+                        isActive('/mission')
+                          ? 'bg-emerald-50 text-emerald-700 font-semibold'
+                          : 'text-gray-700 hover:bg-emerald-50 hover:text-emerald-700'
+                      }`}
+                      onClick={() => setAboutDropdownOpen(false)}
+                    >
+                      Mission
+                    </Link>
+                    <Link
+                      to="/team"
+                      className={`block px-4 py-2 text-sm transition-colors ${
+                        isActive('/team')
+                          ? 'bg-emerald-50 text-emerald-700 font-semibold'
+                          : 'text-gray-700 hover:bg-emerald-50 hover:text-emerald-700'
+                      }`}
+                      onClick={() => setAboutDropdownOpen(false)}
+                    >
+                      Team
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
             
             {user && (
               <Link
@@ -142,7 +226,14 @@ const Navbar = () => {
         }`}>
            <div className="flex flex-col space-y-4">
               <Link to="/" onClick={() => setMobileMenuOpen(false)} className={`block py-2 ${isHomePage ? 'text-white/80 hover:text-white' : 'text-gray-600 hover:text-gray-900'} ${isActive('/') ? 'font-bold text-emerald-700' : ''}`}>Home</Link>
-              <Link to="/about" onClick={() => setMobileMenuOpen(false)} className={`block py-2 ${isHomePage ? 'text-white/80 hover:text-white' : 'text-gray-600 hover:text-gray-900'} ${isActive('/about') ? 'font-bold text-emerald-700' : ''}`}>About</Link>
+              <div>
+                <div className={`block py-2 ${isHomePage ? 'text-white/80' : 'text-gray-600'} ${isAboutActive ? 'font-bold text-emerald-700' : ''}`}>About</div>
+                <div className="pl-4 mt-1 space-y-2">
+                  <Link to="/vision" onClick={() => setMobileMenuOpen(false)} className={`block py-1 text-sm ${isHomePage ? 'text-white/70 hover:text-white' : 'text-gray-500 hover:text-gray-900'} ${isActive('/vision') ? 'font-semibold text-emerald-700' : ''}`}>Vision</Link>
+                  <Link to="/mission" onClick={() => setMobileMenuOpen(false)} className={`block py-1 text-sm ${isHomePage ? 'text-white/70 hover:text-white' : 'text-gray-500 hover:text-gray-900'} ${isActive('/mission') ? 'font-semibold text-emerald-700' : ''}`}>Mission</Link>
+                  <Link to="/team" onClick={() => setMobileMenuOpen(false)} className={`block py-1 text-sm ${isHomePage ? 'text-white/70 hover:text-white' : 'text-gray-500 hover:text-gray-900'} ${isActive('/team') ? 'font-semibold text-emerald-700' : ''}`}>Team</Link>
+                </div>
+              </div>
               {user && <Link to="/dashboard" onClick={() => setMobileMenuOpen(false)} className={`block py-2 ${isHomePage ? 'text-white/80 hover:text-white' : 'text-gray-600 hover:text-gray-900'} ${isActive('/dashboard') ? 'font-bold text-emerald-700' : ''}`}>Dashboard</Link>}
               <hr className={isHomePage ? 'border-white/20' : 'border-gray-200'}/>
               {user ? (

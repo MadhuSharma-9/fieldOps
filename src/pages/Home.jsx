@@ -552,50 +552,58 @@ const Home = () => {
         </div>
       </section>
 
-      {/* HOW IT WORKS */}
-      <section id="how-it-works" className="py-20 bg-white">
+      {/* METHODOLOGY - OUR 5-PHASE PROCESS */}
+      <section id="methodology" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-14">
             <p className="text-xs font-semibold tracking-[0.25em] uppercase text-emerald-600 mb-2">
-              Simple, opinionated flow
+              Our Methodology
             </p>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900 tracking-tight mb-3">
-              From field activity to informed decisions.{" "}
+              Our 5-Phase Process
             </h2>
             <p className="text-sm md:text-base text-gray-600 max-w-2xl mx-auto">
-              We handle the operational complexity so teams see clear
-              assignments, live progress, and reliable field insights that
-              support timely decisions.
+              A structured approach to field research operations, from sampling design through execution and oversight, ensuring rigorous methodology and reliable outcomes.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8">
             {[
               {
                 step: "01",
-                title: "Set up field operations",
-                body: "Define studies, locations, field teams, roles, and timelines in a structured workspace designed for research mobilisation.",
+                title: "Sampling",
+                body: "Define study populations, sampling frames, and selection criteria. Establish clear inclusion and exclusion parameters to ensure representative and valid sample selection.",
               },
               {
                 step: "02",
-                title: "Deploy and track fieldwork",
-                body: "Field activities are logged in real time, linked to locations and assignments, and enriched with time, progress, and supervision details.",
+                title: "Randomization",
+                body: "Implement randomization protocols to assign study units to treatment or control groups. Ensure allocation concealment and maintain randomization integrity throughout the study.",
               },
               {
                 step: "03",
-                title: "Monitor, review, and act",
-                body: "Supervisors and research teams monitor coverage, identify gaps, generate reports, and respond quickly as field conditions change.",
+                title: "Assignment",
+                body: "Assign field teams, enumerators, and supervisors to specific study locations and units. Create clear deployment plans with defined responsibilities and timelines.",
+              },
+              {
+                step: "04",
+                title: "Execution",
+                body: "Execute field activities according to protocol. Log activities in real time with location and timestamp data. Monitor progress and ensure adherence to study procedures.",
+              },
+              {
+                step: "05",
+                title: "Oversight",
+                body: "Conduct continuous monitoring, quality checks, and supervision. Review coverage, identify gaps, and ensure data quality. Generate reports and respond to field conditions.",
               },
             ].map((item, idx) => (
               <div
                 key={item.step}
-                className="relative overflow-hidden rounded-2xl border border-gray-100 bg-slate-50/60 px-6 py-7 shadow-[0_14px_38px_rgba(15,23,42,0.04)]"
+                className="relative overflow-hidden rounded-2xl border border-gray-100 bg-slate-50/60 px-6 py-7 shadow-[0_14px_38px_rgba(15,23,42,0.04)] hover:-translate-y-1 hover:border-emerald-200 hover:shadow-[0_18px_50px_rgba(15,23,42,0.08)] transition-all duration-300"
               >
                 <div className="absolute -top-10 -right-10 h-24 w-24 rounded-full bg-gradient-to-br from-emerald-200/70 to-lime-200/60 opacity-60"></div>
                 <div className="relative">
                   <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 border border-emerald-100 text-[11px] font-semibold text-emerald-700">
                     <span className="text-[10px] tracking-[0.25em] uppercase">
-                      Step {idx + 1}
+                      Phase {idx + 1}
                     </span>
                   </div>
                   <p className="text-xs font-mono text-gray-400 mb-2">
